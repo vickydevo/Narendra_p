@@ -1,0 +1,8 @@
+add lines numbers to File 
+  open file<> then enter ESC 
+      :set number
+without opening file 
+      cat -n README.md
+
+
+
