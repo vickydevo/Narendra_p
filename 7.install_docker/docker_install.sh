@@ -20,29 +20,36 @@ echo "##########################################################################
 echo "# OS is identified as Ubuntu                                                      #"
 echo "# This Script will remove old docker components and install latest stable docker  #"
 echo "###################################################################################"
-sleep 1
+sleep 2
 echo "==> Removing older version of docker if any...."
 apt remove docker docker-engine docker.io containerd runc -y 2>/dev/null
 
 echo "==> Updating exiting list of packagesss..."
+sleep 2
 apt update -y
 
 echo "==> Installing dependencies......."
+sleep 2
 apt install apt-transport-https ca-certificates curl software-properties-common -y
 
 echo "==> Adding the GPG key for the official Docker repository to your system..."
+sleep 2
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 echo "==> Adding the Docker repository to APT sources:.."
+sleep 2
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" -y
 
 echo "==> Update the package database with the Docker packages from the newly added repo..."
+sleep 2
 apt update -y
 
 echo "==> Installing Docker ...."
+sleep 2
 apt-cache policy docker-ce | head -5
 
 echo "==> Now installing docker....." 
+sleep 2
 apt install docker-ce -y
 
 if [[ $? -ne 0 ]]
