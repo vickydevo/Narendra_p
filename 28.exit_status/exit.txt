@@ -1,0 +1,13 @@
+exit status code for success is 0
+exit status code for not success is non zero
+
+exit status can be seen $?
+ we can also use shell scripts also
+  
+  IF command below
+   ls 
+   echo $? --> exit code is 0
+  ahdfa;lf
+VAR
+  cmd_rc=$?
+  echo $cmd_rc --> exit code is 127
