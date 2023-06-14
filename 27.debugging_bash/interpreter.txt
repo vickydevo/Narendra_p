@@ -1,0 +1,7 @@
+c language has complier
+  complier read the file yet a time
+
+BASH is interpreter
+   interpreter read file line by line
+   if line is error it will not execute further
+   
