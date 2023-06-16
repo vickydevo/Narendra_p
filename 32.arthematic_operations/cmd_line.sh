@@ -17,3 +17,4 @@ yum install bc -y
 x=7.3
 y=2.6
 bc<<<$x+$y
+bc <<<"scale=3;$x/$y "
